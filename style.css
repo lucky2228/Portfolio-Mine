@@ -1,14 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=poppins.wght@300;400;500;600;700;800;900&display=swap');
-
-body{
-    background: #1f242d;
-    color: #fff;
-
-}
 a{
     color: #d3dbe4;
     text-decoration: none;
 }
+
 ul{list-style-type:none;
     display: flex;
     margin-left: 35px;
@@ -21,7 +15,18 @@ ul{list-style-type:none;
         justify-content: center;
         align-items: 100;
         z-index: 100;
+        visibility: hidden;
+        opacity: 0;
+        animation: show-content 1.5s linear forwards;
+        animation-delay: 1.2s;
 }
+@keyframes show-content {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 .logo{
     font-size: 30px;
     font-weight: 700;
@@ -51,8 +56,30 @@ ul{list-style-type:none;
     align-items: center;
     height: 100vh;
     padding: 60px 9% 0;
+    gap: 50px;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.9s linear forwards;
+    animation-delay: 2s;
 }
-.home h1{ font-size: 50px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(94, 180, 180);}
+.home-info h3{
+    display: inline-block;
+    font-size: 25px;
+}
+.home-info h3 span{
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px rgb(67, 241, 67);
+    animation: text-decoration 16s linear infinite;
+    animation-delay: calc(-4 * var(--i));
+
+}
+@keyframes text-decoration {
+    25%, 100% {
+        display: none;
+    }
+}
+.home h1{ font-size: 50px; color:  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(94, 180, 180);}
 .home h2{ font-size: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 4px;}
 .home p { font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 8px;
@@ -94,7 +121,14 @@ ul{list-style-type:none;
     box-shadow: 0 0 10px rgb(142, 210, 255);
     color: rgb(117, 226, 74);
 }
-.home-img{ margin-left: 200px; height: 50%; width: 40%; margin-top: 150px;}
+.home-img{ margin-left: 200px; 
+    position: relative;height: 50%; width: 40%; margin-top: 150px;
+    justify-content: center;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 110px;
+}
 
 .img-item img{
     width: 220px;
@@ -103,7 +137,7 @@ ul{list-style-type:none;
     object-fit: cover;
     display: block;
     margin: 0 6px 18px rgb(9, 204, 194);
-    border: 4px solid rgb(107, 248, 94);
+    border: 4px solid rgb(104, 226, 200);
 }
 .home-img .img-box .img-item{
     width: 30vw;
@@ -114,7 +148,46 @@ ul{list-style-type:none;
     display: flex; justify-content: center;
     width: 60%;
     height: 60%;
-    background: #1ffcd7;
+    background: #52b8a7;
     border-radius: 50%;
+}
+.home-img .img-box .img-item img{
+    position: absolute;
+    display: block;
+}
+.img-box{
+    position:relative;
+    width: 20vw;
+    height: 20vw;
+    background: rgb(39, 212, 255);
+    border-radius: 60%;
+    width: 40%;
+    height: 70%;
+    margin-top: 3px;
+    position: relative;
+    border: 4px solid rgb(108, 114, 113);
+}
+.bars-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+.bars-animation .bar {
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    
+    transform: translatey(-100%);
+    animation: show-bars .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+
+
+}
+@keyframes show-bars {
+    100%{
+        transform: translateY(0%);
+    }
 }
 

@@ -1,3 +1,10 @@
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+}
 a{
     color: #d3dbe4;
     text-decoration: none;
@@ -32,19 +39,21 @@ ul{list-style-type:none;
     font-weight: 700;
     margin-right: 120px;
     margin-top: 20px;
-    color: rgb(145, 250, 253);
+    color: #95add8;
     font-family: 'Courier New', Courier, monospace;
 }
 .navbar ul li{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     justify-items: center;
-    margin-left: 35px;
-    border: 2px solid rgb(45, 189, 189);
-    border-radius: 40px;
+    margin-left: 40px;
+    border: 2px solid #95add8;
+    
+    border-radius: 70px;
     font-size: 18px;
     font-weight: 500;  
     display: inline-block; 
     padding: 5px;
 }
+.navbar ul{ margin-left: 80px;}
 .ul li:hover a,
 .navbar ul li.active a{
     color: rgb(79, 255, 182);
@@ -62,22 +71,28 @@ ul{list-style-type:none;
     animation: show-content 1.9s linear forwards;
     animation-delay: 2s;
 }
-.home-info h3{
-    display: inline-block;
-    font-size: 25px;
-}
-.home-info h3 span{
-    display: inline-block;
-    color: transparent;
-    -webkit-text-stroke: .7px rgb(67, 241, 67);
-    animation: text-decoration 16s linear infinite;
-    animation-delay: calc(-4 * var(--i));
 
+.home-info h3 span {
+  margin-left: 20px;
+  position: absolute;
+  opacity: 0;
+  animation: showText 25s  infinite;
+  color: rgb(255, 252, 94);
+  -webkit-text-stroke: .7px rgb(67, 241, 67);
 }
-@keyframes text-decoration {
-    25%, 100% {
-        display: none;
-    }
+
+.home-info h3 span:nth-child(2) { animation-delay: 0s; }
+.home-info h3 span:nth-child(3) { animation-delay: 5s; }
+.home-info h3 span:nth-child(4) { animation-delay: 10s; }
+.home-info h3 span:nth-child(5) { animation-delay: 15s; }
+.home-info h3 span:nth-child(6) { animation-delay: 20s; }
+
+@keyframes showText {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  20%  { opacity: 1; }
+  30%  { opacity: 0; }
+  100% { opacity: 0; }
 }
 .home h1{ font-size: 50px; color:  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(94, 180, 180);}
 .home h2{ font-size: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin-top: 4px;}
@@ -137,7 +152,7 @@ ul{list-style-type:none;
     object-fit: cover;
     display: block;
     margin: 0 6px 18px rgb(9, 204, 194);
-    border: 4px solid rgb(104, 226, 200);
+    border: 4px solid rgb(142, 255, 128);
 }
 .home-img .img-box .img-item{
     width: 30vw;

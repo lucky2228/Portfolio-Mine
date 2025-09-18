@@ -1,0 +1,81 @@
+*{ 
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+background: rgb(9, 40, 53);
+
+}
+
+
+.abt-details{
+    display:flex;
+    align-items: center;
+    margin-left:auto;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 2%;
+    font-size: 20px;
+    color: rgb(238, 238, 222);
+   
+}
+.abt-details .abt-myself{
+   margin-left: 15%;
+    border-radius: 4px;
+    border-color: brown;
+}
+.abt-details .abt-parents{
+   display: inline;
+   margin-right: 15%;
+   margin-bottom: 4%;
+}
+.abt-lines{ margin-left: 5%;}
+.abt-educ table{
+    color: rgb(255, 255, 255);
+    background-color: rgb(248, 255, 243);
+    border-radius: 5%;
+    border-color: rgb(62, 144, 177);
+    border-right: 10%;
+    border-style: groove;
+    margin-left: 20px;
+    padding: 3px;
+    align-items:center;
+    justify-content: space-between;
+    justify-items: center;
+}
+.hob-lang{
+    margin-top: 3%;
+    display:flex;
+    justify-content: space-between;
+    margin-left:auto;
+    justify-content: center;
+}
+.hobbies{margin-right: 3%;}
+
+.hobbies h2{margin-left: 20%;}
+.hobbies h4{margin-left: 8%;}
+.lang{ margin-left: 20%;}
+.lang h4{margin-left: 40%; margin-top: 20px;}
+
+.btn{ display: inline-block;
+    padding: 10px 30px;
+    background: rgb(65, 187, 75);
+    border: 2px solid rgb(141, 211, 211);
+    border-radius: 40px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgb(194, 245, 112);
+    font-size: 18px;
+    color: rgb(55, 80, 16);
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    background: none;
+    margin-left: 45%;
+    
+}
+.btn:hover {
+    background: transparent;
+    color: rgb(182, 237, 65);
+    box-shadow: none;
+}
+.btn a{text-decoration: none; color: rgb(255, 255, 255);}
+.btn{margin-top: 1%; margin-right: 5%;}
+
+
+
